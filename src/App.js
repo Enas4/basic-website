@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Contact from "./components/Contact Us/Contact";
+import Documentation from "./components/Documentation/Documentation";
+import Terms from "./components/Terms  of Use/TermsOfUse";
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [state, setState] = useState("home");
+  const changeName = (value) => {
+    setState(value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header changeName={changeName} />
+      {state === "home" && <Home />}
+      {state === "about" && <About />}
+      {state === "contact" && <Contact />}
+      {state === "documentation" && <Documentation />}
+      {state === "termsofuse" && <Terms />}
     </div>
   );
 }
