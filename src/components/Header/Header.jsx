@@ -8,7 +8,6 @@ const Header = (props) => {
           <li className="Header-li">
             <button
               className="Header-button"
-              href=""
               onClick={() => props.changeName("home")}
             >
               Home
@@ -17,7 +16,6 @@ const Header = (props) => {
           <li className="Header-li">
             <button
               className="Header-button"
-              href=""
               onClick={() => props.changeName("about")}
             >
               About
@@ -26,7 +24,6 @@ const Header = (props) => {
           <li className="Header-li">
             <button
               className="Header-button"
-              href=""
               onClick={() => props.changeName("contact")}
             >
               Contact Us
@@ -35,7 +32,6 @@ const Header = (props) => {
           <li className="Header-li">
             <button
               className="Header-button"
-              href=""
               onClick={() => props.changeName("documentation")}
             >
               Documentation
@@ -44,7 +40,6 @@ const Header = (props) => {
           <li className="Header-li">
             <button
               className="Header-button"
-              href=""
               onClick={() => props.changeName("termsofuse")}
             >
               Terms of Use
